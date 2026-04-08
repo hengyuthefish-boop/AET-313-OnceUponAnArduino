@@ -6,10 +6,10 @@ pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
-  faceshopping();
+  face();
 }
 
-void faceshopping(){
+void face(){
   digitalWrite(ledPin, HIGH);  // turn the LED on (HIGH is the voltage level)
   delay(1000);  
 }
