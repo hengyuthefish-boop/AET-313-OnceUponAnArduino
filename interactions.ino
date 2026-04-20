@@ -68,24 +68,24 @@ void boat() {
 }
 
 void bus() {
-
-  for (pos = 0; pos <= 35; pos += 1) {  
+  for (pos = 180; pos >= 60; pos -= 1) {  
     busServo.write(pos);               
     delay(15);
-    if (pos == 35) {
-      busServo.detach();
-    }  
+    if (pos == 150) {
+      //busServo.detach();
+    }                                                
   }
 }
 
 void globe() {
-  for (globePos = 0; globePos <= 10; globePos += 1) {  
+  
+   for (globePos = 180; globePos >= 170; globePos -= 1) {  
     globeServo.write(globePos);               
     delay(15);
-    if (globePos == 10) {
+    if (pos == 170) {
       globeServo.detach();
     }  
-  }
+   }
 }
 
 void reset() {
@@ -94,17 +94,17 @@ void reset() {
     dadServo.write(90);
     boatServo.write(0);
     busServo.attach(3);
-  for (pos = 180; pos >= 60; pos -= 1) {  
+  for (pos = 0; pos <= 35; pos += 1) {  
     busServo.write(pos);               
     delay(15);
-    if (pos == 150) {
+    if (pos == 35) {
       busServo.detach();
     }  
   }
-  for (globePos = 180; globePos >= 170; globePos -= 1) {  
+  for (globePos = 0; globePos <= 10; globePos += 1) {  
     globeServo.write(globePos);               
     delay(15);
-    if (pos == 170) {
+    if (globePos == 10) {
       globeServo.detach();
     }  
   }
